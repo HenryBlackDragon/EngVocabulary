@@ -14,7 +14,7 @@ public class LoadController {
 
     @GetMapping
     public List<Word> response() {
-        return Arrays.asList(new Word("Hello", "Привет"), new Word("Bye", "Пока"));
+        return Arrays.asList(new Word(1L, "Hello", "Привет"), new Word(2L,"Bye", "Пока"));
     }
 
 }
