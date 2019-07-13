@@ -6,8 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface WordRepo extends JpaRepository<Word, Long> {
+public interface TitleRepo extends JpaRepository<TitleVocabulary, Long> {
 
-    List<Word> findAllByTitleName(TitleVocabulary id);
-
+    TitleVocabulary findByTitle(String name);
 }
