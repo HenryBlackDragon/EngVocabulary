@@ -1,12 +1,10 @@
 package com.alex.repository;
 
 import com.alex.model.TitleVocabulary;
-import com.alex.model.Word;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
+import java.util.Optional;
 
 public interface TitleRepo extends JpaRepository<TitleVocabulary, Long> {
-
-    TitleVocabulary findByTitle(String name);
+    Optional<TitleVocabulary> findByTitle(String name);
 }

@@ -1,5 +1,6 @@
 package com.alex.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -37,5 +38,6 @@ public class Word {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "title_id", nullable = false)
+    @JsonIgnore
     private TitleVocabulary titleName;
 }
